@@ -63,5 +63,6 @@ Vagrant.configure("2") do |config|
   # end
 
   # config.vm.provision "shell", :path => "provision_upgrade.sh"
-  # config.vm.provision "shell", :path => "provision_setup.sh"
+  # config.vm.provision "shell", :path => "provision_setup_apache2.sh"
+  # config.vm.provision "shell", :path => "provision_setup_php.sh"
 end
