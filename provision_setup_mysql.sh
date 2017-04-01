@@ -6,6 +6,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password 123
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 1234qwer'
 apt-get install -y mysql-server
 apt-get install -y php7.0-mysql
+sudo service apache2 restart
 
 cd /etc/mysql/mysql.conf.d
 sed -i -e "s/^bind-address/#bind-address/" mysqld.cnf
