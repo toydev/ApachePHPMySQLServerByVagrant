@@ -10,6 +10,11 @@ sed -i -e "s/\/var\/www\/html/\/vagrant_data\/site/" 001-www.conf
 cat /vagrant_data/provision/001-www.conf >> 001-www.conf
 a2dissite 000-default
 a2ensite 001-www
+
+# Local Environment Mark
+cd /etc/apache2
+echo "export LOCAL_ENV=1" >> envvars
+
 apache2ctl restart
 
 echo "[`date`] End   provision setup_apache2"
