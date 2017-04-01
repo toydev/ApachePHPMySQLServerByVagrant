@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt-get install apache2 -y
+apt-get install -y apache2
 cd /etc/apache2/sites-available
 sudo cp 000-default.conf 001-www.conf
 sudo sed -i -e "s/webmaster@localhost/toy@ownway.info/" 001-www.conf
