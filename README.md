@@ -6,5 +6,5 @@
  - Apache2
    - rewrite
  - PHP 7.0
-   - Debug
+   - XDebug
  - MySQL
