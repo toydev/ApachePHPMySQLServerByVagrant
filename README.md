@@ -24,6 +24,10 @@
  - [Vagrant](https://www.vagrantup.com/)
  - 任意の ssh クライアント
 
+## 設定
+
+config.rb を環境に合わせて編集してください。
+
 ## 使い方
 
 ```
