@@ -6,8 +6,9 @@
 
 ゲスト OS の構成は以下のようになります。
 
-- Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)
+ - Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)　
  - Apache 2.4.18
+   - /vagrant_data/site 配下を公開
    - rewrite
  - PHP 7.0
    - mbstring
@@ -15,4 +16,16 @@
    - Pear
    - XDebug
  - MySQL 5.7.17
-   - root's passwrod: 1234qwer
+   - root パスワード: 1234qwer
+
+## 前提構成
+
+ - [VirtualBox](https://www.virtualbox.org/)
+ - [Vagrant](https://www.vagrantup.com/)
+
+## 使い方
+
+```
+vagrant up
+vagrant ssh
+```
