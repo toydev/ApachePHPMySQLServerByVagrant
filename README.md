@@ -22,6 +22,7 @@
 
  - [VirtualBox](https://www.virtualbox.org/)
  - [Vagrant](https://www.vagrantup.com/)
+ - 任意の ssh クライアント
 
 ## 使い方
 
