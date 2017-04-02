@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require './config.rb'
+
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -37,8 +39,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./provision", "/vagrant_data/provision"
-  config.vm.synced_folder "E:/Site", "/vagrant_data/site", :owner => 'www-data', :group => 'www-data'
+  config.vm.synced_folder SITE_DIR, "/vagrant_data/site", :owner => 'www-data', :group => 'www-data'
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -62,9 +63,9 @@ Vagrant.configure("2") do |config|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
 
-  config.vm.provision "shell", :path => "provision_upgrade.sh"
-  config.vm.provision "shell", :path => "provision_setup_utils.sh"
-  config.vm.provision "shell", :path => "provision_setup_apache2.sh"
-  config.vm.provision "shell", :path => "provision_setup_php.sh"
-  config.vm.provision "shell", :path => "provision_setup_mysql.sh"
+  config.vm.provision "shell", :path => "provision/upgrade.sh"
+  config.vm.provision "shell", :path => "provision/setup_utils.sh"
+  config.vm.provision "shell", :path => "provision/setup_apache2.sh"
+  config.vm.provision "shell", :path => "provision/setup_php.sh"
+  config.vm.provision "shell", :path => "provision/setup_mysql.sh"
 end

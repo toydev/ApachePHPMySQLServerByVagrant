@@ -14,7 +14,7 @@ pear install log4php/Apache_log4php
 apt-get install -y php7.0-dev
 pecl install xdebug
 cd /etc/php/7.0/apache2/conf.d
-cp /vagrant_data/provision/xdebug.ini /etc/php/7.0/mods-available
+cp /vagrant/provision/support/xdebug.ini /etc/php/7.0/mods-available
 ln -s ../../mods-available/xdebug.ini 20-xdebug.ini
 
 echo "[`date`] End   provision setup_php"
