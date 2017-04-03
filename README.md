@@ -13,7 +13,7 @@
  - PHP 7.0
    - mbstring
    - SQLite3
-   - Pear
+   - PEAR
    - XDebug
  - MySQL 5.7.17
    - root パスワード: 1234qwer
