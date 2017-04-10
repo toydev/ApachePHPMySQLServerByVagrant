@@ -2,7 +2,7 @@
 
 echo "[`date`] Start provision setup_utils"
 
-apt-get -y zip
-apt-get -y unzip
+apt-get install -y zip
+apt-get install -y unzip
 
 echo "[`date`] End   provision setup_utils"
