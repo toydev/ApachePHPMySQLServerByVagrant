@@ -1,7 +1,16 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require './config.rb'
+require 'json'
+
+CONFIG_JSON = "config.json"
+
+if File.exists?(CONFIG_JSON) then
+  user_config = JSON.load(File.read(CONFIG_JSON))
+else
+  puts "#{CONFIG_JSON} does not exist"
+  exit
+end
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -39,7 +48,9 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder SITE_DIR, "/vagrant_data/site", :owner => 'www-data', :group => 'www-data'
+  if user_config.has_key?("site_root_dir") then
+    config.vm.synced_folder user_config["site_root_dir"], "/vagrant_data/site", :owner => 'www-data', :group => 'www-data'
+  end
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
