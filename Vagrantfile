@@ -63,6 +63,7 @@ Vagrant.configure("2") do |config|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
 
+  config.vm.provision "shell", :path => "provision/setup_precondition.sh"
   config.vm.provision "shell", :path => "provision/setup_utils.sh"
   config.vm.provision "shell", :path => "provision/setup_apache2.sh"
   config.vm.provision "shell", :path => "provision/setup_php.sh"
