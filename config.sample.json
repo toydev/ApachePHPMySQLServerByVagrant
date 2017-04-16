@@ -1,4 +1,12 @@
 {
-    "site_root_dir": "�T�C�g�̃��[�g�f�B���N�g���Ƃ��Č��J����z�X�g�̃f�B���N�g�����w�肷��B",
-    "site_root_dir": "C:/SiteRootDirectoryPath"
+	"site_root_dir": "サイトのルートディレクトリとして公開するホストのディレクトリを指定する。",
+	"site_root_dir": "C:/SiteRootDirectoryPath",
+	"provision_paths": "ゲストの準備に使用するスクリプトを指定する。",
+	"provision_paths": [
+		"provision/setup_precondition.sh",
+		"provision/setup_utils.sh",
+		"provision/setup_apache2.sh",
+		"provision/setup_php.sh",
+		"provision/setup_mysql.sh"
+	]
 }
