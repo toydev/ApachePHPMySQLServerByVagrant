@@ -26,11 +26,27 @@
 
 ## 設定
 
-config.rb を環境に合わせて編集してください。
+config.sample.json を環境に合わせて編集して config.json の名前で保存してください。
 
 ## 使い方
 
+各 vagrant コマンドは、ApachePHPMySQLServerByVagrant のルートディレクトリで実行します。
+
+最初に vagrant up で環境を構築します。
+
 ```
 vagrant up
+```
+
+VM が立ち上がったら vagrant ssh でログインできます。
+
+```
 vagrant ssh
+```
+
+config.json で site_root_dir を設定している場合は、
+ブラウザに以下の URL を入力することで site_root_dir 配下のページにアクセスできます。
+
+```
+http://192.168.33.10/
 ```
