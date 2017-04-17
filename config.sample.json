@@ -4,7 +4,6 @@
 	"provision_paths": "ゲストの準備に使用するスクリプトを指定する。",
 	"provision_paths": [
 		"provision/setup_precondition.sh",
-		"provision/setup_utils.sh",
 		"provision/setup_apache2.sh",
 		"provision/setup_php.sh",
 		"provision/setup_mysql.sh"
