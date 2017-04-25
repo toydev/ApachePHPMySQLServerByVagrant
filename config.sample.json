@@ -1,7 +1,9 @@
 {
-	"site_root_dir": "サイトのルートディレクトリとして公開するホストのディレクトリを指定する。",
+	"private_network_ip": "ゲストのプライベート IP を設定します。省略時はプライベート IP を設定しません。",
+	"private_network_ip": "192.168.33.10",
+	"site_root_dir": "サイトのルートディレクトリとして公開するホストのディレクトリを指定する。/vagrant/site にマウントし、ゲストの Apache で / に公開します。省略時は公開しません。",
 	"site_root_dir": "C:/SiteRootDirectoryPath",
-	"provision_paths": "ゲストの準備に使用するスクリプトを指定する。",
+	"provision_paths": "ゲストの準備に使用するスクリプトを実行順で指定する。",
 	"provision_paths": [
 		"provision/setup_precondition.sh",
 		"provision/setup_apache2.sh",
