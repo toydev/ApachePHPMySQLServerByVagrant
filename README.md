@@ -28,6 +28,8 @@
 
 config.sample.json を環境に合わせて編集して config.json の名前で保存してください。
 
+各設定項目については config.sample.json 内のコメントを参照してください。
+
 ## 使い方
 
 各 vagrant コマンドは、ApachePHPMySQLServerByVagrant のルートディレクトリで実行します。
@@ -44,8 +46,9 @@ VM が立ち上がったら vagrant ssh でログインできます。
 vagrant ssh
 ```
 
-config.json で site_root_dir を設定している場合は、
-ブラウザに以下の URL を入力することで site_root_dir 配下のページにアクセスできます。
+config.json で private_network_ip および site_root_dir を設定している場合は、
+ブラウザに private_network_ip を入力することで site_root_dir 配下のページにアクセスできます。
+以下は private_network_ip に 192.168.33.10 を設定している場合の例です。
 
 ```
 http://192.168.33.10/
