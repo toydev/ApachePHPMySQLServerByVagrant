@@ -8,9 +8,6 @@ apt-get install -y php7.0-sqlite3
 apt-get install -y php-pear
 apt-get install -y libapache2-mod-php7.0
 
-pear channel-discover pear.apache.org/log4php
-pear install log4php/Apache_log4php
-
 apt-get install -y php7.0-dev
 pecl install xdebug
 cd /etc/php/7.0/apache2/conf.d
