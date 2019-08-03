@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "[`date`] Start provision setup_apache2"
+echo "[`date`] Start provision `basename $0`"
 
 apt install -y apache2
 
@@ -18,4 +18,4 @@ a2ensite 001-www
 
 apache2ctl restart
 
-echo "[`date`] End   provision setup_apache2"
+echo "[`date`] End   provision `basename $0`"

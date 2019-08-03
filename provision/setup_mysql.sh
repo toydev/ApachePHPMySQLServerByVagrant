@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "[`date`] Start provision setup_mysql"
+echo "[`date`] Start provision `basename $0`"
 
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password 1234qwer'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 1234qwer'
@@ -13,4 +13,4 @@ sed -i -e "s/^bind-address/#bind-address/" mysqld.cnf
 /etc/init.d/mysql restart
 service apache2 restart
 
-echo "[`date`] End   provision setup_mysql"
+echo "[`date`] End   provision `basename $0`"
