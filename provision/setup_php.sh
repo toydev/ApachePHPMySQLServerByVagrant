@@ -2,13 +2,13 @@
 
 echo "[`date`] Start provision setup_php"
 
-apt-get install -y php7.0
-apt-get install -y php7.0-mbstring
-apt-get install -y php7.0-sqlite3
-apt-get install -y php-pear
-apt-get install -y libapache2-mod-php7.0
+apt install -y php7.0
+apt install -y php7.0-mbstring
+apt install -y php7.0-sqlite3
+apt install -y php-pear
+apt install -y libapache2-mod-php7.0
 
-apt-get install -y php7.0-dev
+apt install -y php7.0-dev
 pecl install xdebug
 cd /etc/php/7.0/apache2/conf.d
 cp /vagrant/provision/support/xdebug.ini /etc/php/7.0/mods-available

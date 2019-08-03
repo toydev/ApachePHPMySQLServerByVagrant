@@ -2,7 +2,7 @@
 
 echo "[`date`] Start provision setup_apache2"
 
-apt-get install -y apache2
+apt install -y apache2
 
 # Mod
 a2enmod rewrite
