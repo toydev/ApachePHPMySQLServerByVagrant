@@ -16,6 +16,6 @@ cat /vagrant/provision/support/001-www.conf >> 001-www.conf
 a2dissite 000-default
 a2ensite 001-www
 
-apache2ctl restart
+service apache2 restart
 
 echo "[`date`] End   provision `basename $0`"

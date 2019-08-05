@@ -10,7 +10,7 @@ apt install -y php7.0-mysql
 cd /etc/mysql/mysql.conf.d
 sed -i -e "s/^bind-address/#bind-address/" mysqld.cnf
 
-/etc/init.d/mysql restart
+service mysql restart
 service apache2 restart
 
 echo "[`date`] End   provision `basename $0`"
