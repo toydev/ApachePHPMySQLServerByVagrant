@@ -5,7 +5,7 @@
 	"forwarded_ports": [
 		{
 			"guest": 80,
-			"host": 8080
+			"host": 80
 		}
 	],
 	"site_root_dir": "サイトのルートディレクトリとして公開するホストのディレクトリを指定する。/vagrant/site にマウントし、ゲストの Apache で / に公開します。省略時は公開しません。",
