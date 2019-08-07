@@ -6,16 +6,16 @@
 
 ゲスト OS の構成は以下のようになります。
 
- - Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-66-generic x86_64)　
- - Apache 2.4.18
+ - Ubuntu 19.04
+ - Apache 2.4.38
    - /vagrant_data/site 配下を公開
    - rewrite
- - PHP 7.0
+ - PHP 7.2.19
    - mbstring
    - SQLite3
    - PEAR
    - XDebug
- - MySQL 5.7.17
+ - MySQL 5.7.27
    - root パスワード: 1234qwer
 
 ## 前提構成
